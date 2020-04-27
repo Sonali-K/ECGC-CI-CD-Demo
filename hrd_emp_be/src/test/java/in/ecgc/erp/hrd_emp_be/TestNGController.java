@@ -53,7 +53,7 @@ public class TestNGController extends AbstractTestNGSpringContextTests {
 	@Order(1)
 	public void addEmployee() throws Exception {
 		Employee emp = new Employee();
-		emp.setEmpId(9);
+		emp.setEmpId(6);
 		emp.setFirstName("Arun");
 		emp.setLastName("K");
 		emp.setDob("1999-9-9");
@@ -70,11 +70,11 @@ public class TestNGController extends AbstractTestNGSpringContextTests {
 	@Test
 	//@Order(2)
 	public void deleteEmployee() throws Exception {
-		Employee emp = new Employee();
-		emp.setEmpId(10);
-			mockMvc.perform(MockMvcRequestBuilders.get("/deleteEmployee/10")
-				.contentType(MediaType.APPLICATION_STREAM_JSON)
-			.content(asJsonString(emp)))
+		//Employee emp = new Employee();
+		//emp.setEmpId(9);
+			mockMvc.perform(MockMvcRequestBuilders.get("/deleteEmployee/6")
+				.contentType(MediaType.APPLICATION_STREAM_JSON))
+			//.content(asJsonString(emp)))
 		.andExpect(status().isOk())
 		.andExpect(MockMvcResultMatchers.jsonPath("$").value(1));
 	}
