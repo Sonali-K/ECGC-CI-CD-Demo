@@ -72,7 +72,7 @@ public class TestNGController extends AbstractTestNGSpringContextTests {
 	public void deleteEmployee() throws Exception {
 		//Employee emp = new Employee();
 		//emp.setEmpId(9);
-			mockMvc.perform(MockMvcRequestBuilders.get("/deleteEmployee/6")
+			mockMvc.perform(MockMvcRequestBuilders.get("/deleteEmployee/5")
 				.contentType(MediaType.APPLICATION_STREAM_JSON))
 			//.content(asJsonString(emp)))
 		.andExpect(status().isOk())
