@@ -68,7 +68,7 @@ public class TestNGController extends AbstractTestNGSpringContextTests {
 	}
 	
 	@Test
-	//@Order(2)
+	@Order(2)
 	public void deleteEmployee() throws Exception {
 		//Employee emp = new Employee();
 		//emp.setEmpId(9);
