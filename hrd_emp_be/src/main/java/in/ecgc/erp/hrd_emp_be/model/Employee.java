@@ -1,10 +1,5 @@
 package in.ecgc.erp.hrd_emp_be.model;
 
-import javax.validation.constraints.NotBlank;
-
-import lombok.Data;
-
-
 /**
  *Employee Model class
  *

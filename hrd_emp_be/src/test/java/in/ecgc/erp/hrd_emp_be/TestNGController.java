@@ -64,7 +64,7 @@ public class TestNGController extends AbstractTestNGSpringContextTests {
 				.contentType(MediaType.APPLICATION_STREAM_JSON)
 				.content(asJsonString(emp)))
 		.andExpect(status().isOk())
-		.andExpect(MockMvcResultMatchers.jsonPath("$").value(true));
+		.andExpect(MockMvcResultMatchers.jsonPath("$").isNotEmpty());
 	}
 	
 	@Test
@@ -77,6 +77,8 @@ public class TestNGController extends AbstractTestNGSpringContextTests {
 			//.content(asJsonString(emp)))
 		.andExpect(status().isOk())
 		.andExpect(MockMvcResultMatchers.jsonPath("$").value(1));
+		
+		
 	}
 
 	

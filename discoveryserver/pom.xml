@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>in.ecgc.sys</groupId>
-	<artifactId>eurekaserver</artifactId>
+	<artifactId>discoveryserver</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>eurekaserver</name>
 	<description>eurekaserver</description>

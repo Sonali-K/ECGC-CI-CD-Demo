@@ -1,0 +1,36 @@
+version: "3"
+networks:
+  discoveryserver: 
+services:
+  discoveryserver:
+    build: ./discoveryserver
+    container_name: server
+    ports:
+      - "8000:8000"
+    networks:
+      - discoveryserver
+   
+
+  hrd_emp_be:
+    build: ./hrd_emp_be
+    container_name: be
+    ports:
+      - "8083:8083"
+    networks:
+      - discoveryserver
+    depends_on:
+      - discoveryserver
+ 
+
+  hrd_emp_fe:
+    build: ./hrd_emp_fe
+    container_name: fe
+    ports:
+      - "8082:8082"
+    networks:
+      - discoveryserver
+    depends_on:
+      - hrd_emp_be
+      - discoveryserver
+ 
+
