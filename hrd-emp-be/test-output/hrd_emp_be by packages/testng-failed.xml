@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [hrd_emp_be by packages]">
+  <test name="in.ecgc.erp.hrd_emp_be(failed)" preserve-order="true">
+    <classes>
+      <class name="in.ecgc.erp.hrd_emp_be.TestNGController">
+        <methods>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="setup"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="addEmployee"/>
+          <include name="springTestContextAfterTestMethod"/>
+        </methods>
+      </class> <!-- in.ecgc.erp.hrd_emp_be.TestNGController -->
+    </classes>
+  </test> <!-- in.ecgc.erp.hrd_emp_be(failed) -->
+</suite> <!-- Failed suite [hrd_emp_be by packages] -->
