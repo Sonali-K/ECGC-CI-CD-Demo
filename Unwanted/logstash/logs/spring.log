@@ -1,0 +1,55 @@
+2020-05-09 13:18:46 [restartedMain] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
+2020-05-09 13:18:46 [restartedMain] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2020-05-09 13:18:46 [restartedMain] WARN  o.s.c.c.c.ConfigServicePropertySourceLocator - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/hrd-emp-be/default": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)
+2020-05-09 13:18:46 [restartedMain] INFO  i.e.e.hrd_emp_be.HrdEmpBeApplication - No active profile set, falling back to default profiles: default
+2020-05-09 13:18:46 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=a09dab99-f347-32b4-a043-a664fc3e0916
+2020-05-09 13:18:46 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8083 (http)
+2020-05-09 13:18:46 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-05-09 13:18:46 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-09 13:18:46 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-05-09 13:18:46 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 522 ms
+2020-05-09 13:18:47 [restartedMain] WARN  o.s.c.s.z.ZipkinAutoConfiguration - Check result of the [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@4c3bddff}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://192.168.29.201:9411/api/v2/spans": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)}]
+2020-05-09 13:18:47 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 19 endpoint(s) beneath base path '/actuator'
+2020-05-09 13:18:48 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-09 13:18:48 [restartedMain] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-05-09 13:18:48 [restartedMain] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-09 13:18:48 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-09 13:18:48 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-05-09 13:18:48 [restartedMain] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-05-09 13:18:48 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2020-05-09 13:18:48 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2020-05-09 13:18:48 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+2020-05-09 13:18:48 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+2020-05-09 13:18:48 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+2020-05-09 13:18:48 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+2020-05-09 13:18:48 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-05-09 13:18:48 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2020-05-09 13:18:48 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2020-05-09 13:18:48 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2020-05-09 13:18:48 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2020-05-09 13:18:48 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2020-05-09 13:18:48 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2020-05-09 13:18:48 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2020-05-09 13:18:48 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2020-05-09 13:18:48 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2020-05-09 13:18:48 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-05-09 13:18:48 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1589010528525 with initial instances count: 1
+2020-05-09 13:18:48 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application HRD-EMP-BE with eureka with status UP
+2020-05-09 13:18:48 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1589010528533, current=UP, previous=STARTING]
+2020-05-09 13:18:48 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_HRD-EMP-BE/192.168.29.201:hrd-emp-be:8083: registering service...
+2020-05-09 13:18:48 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-05-09 13:18:48 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-05-09 13:18:48 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_HRD-EMP-BE/192.168.29.201:hrd-emp-be:8083 - registration status: 204
+2020-05-09 13:18:48 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-05-09 13:18:48 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8083 (http) with context path ''
+2020-05-09 13:18:48 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8083
+2020-05-09 13:18:48 [restartedMain] INFO  i.e.e.hrd_emp_be.HrdEmpBeApplication - Started HrdEmpBeApplication in 2.247 seconds (JVM running for 1210.047)
+2020-05-09 13:18:48 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-05-09 13:23:48 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-05-09 13:28:48 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-05-09 13:33:48 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-05-09 13:38:48 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-05-09 13:43:48 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-05-09 13:48:48 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-05-09 13:53:48 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-05-09 14:40:26 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration

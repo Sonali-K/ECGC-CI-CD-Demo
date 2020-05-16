@@ -1,39 +1,54 @@
-version: "3"
-networks:
-  discoveryserver: 
+version: '2.1'
+
 services:
-  discoveryserver:
-    build: ./discoveryserver
-    image: sdkanse/discoveryserver:0.0.1-SNAPSHOT.jar
-    container_name: server
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.3.2
+    environment:
+      - cluster.name=docker-cluster
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - "xpack.security.enabled=false"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
     ports:
-      - "8001:8000"
+      - "9200:9200"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9200"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
     networks:
       - discoveryserver
-   
-
-  hrd-emp-be:
-    build: ./hrd-emp-be
-    image: sdkanse/hrd-emp-be:0.0.1-SNAPSHOT.jar
-    container_name: be
+  kibana:
+    image: docker.elastic.co/kibana/kibana:6.3.2
     ports:
-      - "8084:8083"
-    networks:
-      - discoveryserver
+      - "5601:5601"
+    environment:
+      - "xpack.security.enabled=false"
     depends_on:
-      - discoveryserver
- 
-
-  hrd-emp-fe:
-    build: ./hrd-emp-fe
-    image: sdkanse/hrd-emp-fe:0.0.1-SNAPSHOT.jar
-    container_name: fe
-    ports:
-      - "8081:8082"
+       elasticsearch:
+         condition: service_healthy
     networks:
       - discoveryserver
+  logstash:
+    image: docker.elastic.co/logstash/logstash:6.3.2
+    ports:
+      - "25826:25826"
+    volumes:
+      - $PWD/elk-config:/elk-config
+    command: logstash -f /elk-config/logstash.config
     depends_on:
-      - hrd-emp-be
-      - discoveryserver
- 
+      elasticsearch:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
 
+  
+ 
+networks:
+      discoveryserver:
