@@ -10,4 +10,4 @@
 
 | Branch        | Declarative | Scripted | Library/SQ |
 | ------------- |:-----------:| --------:| ----------:|
-| 1. Simple pipeline                      | [![Build Status](https://oss.cloudogu.com/jenkins/buildStatus/icon?job=cloudogu-github/jenkinsfiles/1-declarative)](https://oss.cloudogu.com/jenkins/job/cloudogu-github/job/jenkinsfiles/job/1-declarative/) | [![Build Status](https://oss.cloudogu.com/jenkins/buildStatus/icon?job=cloudogu-github/jenkinsfiles/1-scripted)](https://oss.cloudogu.com/jenkins/job/cloudogu-github/job/jenkinsfiles/job/1-scripted/) |  | 
+| 1. Simple pipeline                      | [![Build Status](http://10.212.0.72:8080/buildStatus/icon?job=Declarative-Script-2)](http://10.212.0.72:8080/job/Declarative-Script-2/) |  | 
